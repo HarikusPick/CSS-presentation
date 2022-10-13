@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>CSS(I)</title>
+  <meta name="description" content="css giriş 1 furkan/agah" />
+  <meta name="keywords" content="website, css giriş" />
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="src/style.css"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="basa-don"><a href="#logo" title="başa dön"><img id="basa-don-img" src="src/arrow-up.png"></a></div>
+  <div id="yukari-div"><a href="#footer" title="sona git"><img id="yukari-img" src="src/arrow-up.png"></a></div>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><a href="#"><span class="logo_colour">CSS(I) Giris</span></a></h1>
+          <h2>Furkan / Agah</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li class="selected"><a href="index.html">Anasayfa</a></li>
+          <li><a href="src/ornekler.html">Ornekler</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div id="konular">
+
+        <ul id="t-o-ul">
+            <h3 id="temel_ozellikler">Temel Özellikler</h3>
+          <li class="temel_ozellikler_li"><a href="#fonts">Font</a></li>
+          <li class="temel_ozellikler_li"><a href="#color">COLOR</a></li>
+          <li class="temel_ozellikler_li"><a href="#background">BG</a></li>
+          <li class="temel_ozellikler_li"><a href="#border">BORDER</a></li>
+          <li class="temel_ozellikler_li"><a href="#listeler">LİSTELER</a></li>
+          <li class="temel_ozellikler_li"><a href="#box">BOX</a></li>
+          <li class="temel_ozellikler_li"><a href="#margin-padding">M-P</a></li>
+          <li class="temel_ozellikler_li"><a href="#table">TABLE</a></li>
+          <li class="temel_ozellikler_li"><a href="#display">DISPLAY</a></li>
+          <li class="temel_ozellikler_li"><a href="#overflow">OVERFLOW</a></li>
+          <li class="temel_ozellikler_li"><a href="#inline-block">INLINE-BLOCK</a></li>
+          <li class="temel_ozellikler_li"><a href="#align">ALIGN</a></li>
+          <li class="temel_ozellikler_li"><a href="#pseduo">PSEDUO</a></li>
+          <li class="temel_ozellikler_li"><a href="#position">POSITION</a></li>
+          <li class="temel_ozellikler_li"><a href="#max-width">MAX-WIDTH</a></li>
+          <li class="temel_ozellikler_li"><a href="#opacity">OPACITY</a></li>
+          <li class="temel_ozellikler_li"><a href="#hover">LİNKLER</a></li>
+          <li class="temel_ozellikler_li"><a href="#dropdown">DROPDOWN</a></li>
+            <li class="temel_ozellikler_li"><a style="color: tomato;" href="#bootstrap">BOOTSTRAP</a></li>
+        </ul>
+          <button class="buton" onclick="document.getElementById('t-o-ul').style.display= 'none'">Kapat</button>
+          <button class="buton" onclick="document.getElementById('t-o-ul').style.display= 'block'">Aç</button>
+      </div>
+      <div class="sidebar">
+        <h3>İşin Aslı</h3>
+        <p>Slayt(sunum) yapmadım. Çünkü sunumla bu konunun pek anlaşılır olacağını düşünmedim. Web site yapımının en iyi yolunun web sitesi yaparak içinde uygulamalı olarak anlatmak olduğunu düşündüm. Umarım bu şekilde anlatımı beğenmişsinizdir. Dinlediğiniz için teşekkür ederim.</p>
+        <p></p>
+        <h4>Nasıl yaptım.</h4>
+        <h5>26.11.2019-30.11.2019</h5>
+        <p>Genelde geceleri çalışıyorum. Sabaha sarkıyor. Sabahları okul olduğu için yarıda kalıyor. Bu yüzden uzun sürdü.</p>
+        <p>Sayfa dolu gözüsün diye uzatıyorum.</p>
+        <p>Kaynak: w3schools - eski notlarım</p>
+        <h3>Siteiçi Arama</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" placeholder="Aramak İstediğiniz.." />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1 id="konu_1"><b>Css nedir ?</b></h1>
+        <p>CSS bir kısaltmadır. <strong>"Cascading Style Sheets" </strong>kelimesinin baş harflerinden oluşur. Dilimizdeki anlamı: Basamaklı Stil Sayfası.</p>
+        <p>Stiller, bir HTML elementinin nasıl görüneceğini belirler.</p>
+        <p>HTML dosyamızın daha anlaşılır olmasını sağlar. Stillerimiz tek bir dosyada toplanır ve kolaylıkla okunur - değiştirilir.</p>
+        <p>Stil dosyalarımızın uzantısı *.css dir. CSS Dosyası birçok stil barındırabilir.</p>
+        <h2 id="konu_2"><b>CSS KOD YAPISI</b></h2>
+        <p>Seçim genel olarak stilini belirleyeceğimiz HTML elementidir, h1, a, body, p gibi.</p>
+        <p>İfadeler : özellik – değer şeklinde kullanılır.</p>
+        <img alt="yapi" src="src/yapi.jpg">
+        <h1 id="konu_3"><b>Class kullanımı</b></h1>
+        <p>Birçok elementte kullanılabilir.</p>
+        <textarea class="kodlar" disabled><div class="deneme"><p> deneme yazısıdır bu </p></div></textarea>
+        <p>Yukarıdaki div elementi içinde yer alan class="deneme", o div elementi için CSS özellikleri belirtmemizi sağlayan bir yoldur. </p>
+        <textarea class="kodlar" disabled>.deneme { background-color: red; }</textarea>
+        <h2 id="konu_4"><b>Id kullanımı</b></h2>
+        <p>Sadece tek bir elementte kullanılabilir.</p>
+        <p>Aynı id değeri iki elemente verilemez (Her id sadece tek bir elementte kullanılabilir).</p>
+        <p>Stil dosyamızda CLASS'da . (nokta) kullanırdık, ancak id özelliğine göre stilleme yapacaksak # (diyez) kullanırız.</p>
+        <textarea class="kodlar" disabled><div id="deneme">Merhaba!</div></textarea>
+        <p>CSS kodumuz ise;</p>
+        <textarea class="kodlar" disabled>#deneme { background-color: red; }</textarea>
+        <h1 id="fonts"><b>Fonts</b></h1>
+        <p>generic family: Benzer görünüme sahip bir yazı tipi ailesi grubu ("Serif" veya "Monospace" gibi)</p>
+        <p>font family:  Belirli bir font ailesi ("Times New Roman" veya "Arial" gibi)</p>
+        <textarea class="kodlar" id="fonts-kodlar" disabled>font-family: Arial, Helvetica, sans-serif;
+font-family: "Times New Roman", Times, serif;
+        </textarea>
+        <h1 id="color"><b>Color</b></h1>
+        <p>Yazıların rengini düzenlememizi sağlar. Örnek aşağıdadır.</p>
+        <textarea disabled class="kodlar" ><h1 style="color: darkred">Benim rengim koyu kırmızı....</h1></textarea>
+        <p>Çıktımız :</p>
+        <h1 style="color: darkred;"><i><u>Benim rengim koyu kırmızı....</u></i></h1>
+        <p><span style="color: lime">darkred yazan</span><span style="color: #009933"> yeri istediğimiz</span> <span style="color: darkblue">renk ismi veya renk</span> <span style="color: orangered">kodunu yazabiliriz.</span></p>
+        <h1 id="background"><b>Background</b></h1>
+        <p>Kısaca arka plan rengidir. Ana gövdenin veya objelerin arka plan renklerini düzenleme olanağı sağlar</p>
+        <p>Normalde HTML de obje eklediğimizde, o objeleri görmeyiz.Arka plan rengi bu yüzden önemlidir. Onları görünür kılar.</p>
+        <p>Örnek olarak:</p>
+        <div style="width: 80px; height: 10px;"></div>
+        <p>Yukarıda ön tarafta görünmese de bir div bulunyor. Bunu sadece kodda görebiliriz.</p>
+        <p>Bu div'e yine arka planda bir renk verelim:</p>
+        <div style="width: 80px; height: 10px; background-color: #CCFF66"></div>
+        <p>Örnek olarak bir div oluşturalım ve ona boyut kazandırıp renk verelim.(id sonunda *di* yazdım. o normalde div)</p>
+        <p>Kod:</p>
+        <textarea class="kodlar" disabled>
+          <div id="bg_color_ornek_di"></div>
+        </textarea>
+        <p>Yukarıda bir div oluşturduk. Şimdi ise ona CSS ile görüntü sağlayalım.</p>
+        <textarea class="kodlar" id="bg_color_kodlar" disabled>
+          #bg_color_ornek_di {
+          width: 50px;
+          height: 50px;
+          background-color: darkslateblue;
+          }
+        </textarea>
+        <p>Çıktısı ise:</p>
+        <div id="bg_color_ornek_div" style="width: 50px; height: 50px; background-color: darkslateblue; margin-bottom: 20px;"></div>
+        <p>Aşağıdaki örnekleri inceleyelim.</p>
+        <textarea disabled class="kodlar" id="color_kod">
+          <h1 style="background-color:Tomato;">Tomato</h1>
+          <h1 style="background-color:Orange;">Orange</h1>
+          <h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+          <h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+          <h1 style="background-color:Gray;">Gray</h1>
+          <h1 style="background-color:SlateBlue;">SlateBlue</h1>
+          <h1 style="background-color:Violet;">Violet</h1>
+          <h1 style="background-color:LightGray;">LightGray</h1>
+        </textarea>
+        <p>Kodların çıktısı: </p>
+        <div id="color_kod_div">
+          <h4 class="color_kod_ciktisi" style="background-color:Tomato;">Tomato</h4>
+          <h4 class="color_kod_ciktisi" style="background-color:Orange;">Orange</h4>
+          <h4 class="color_kod_ciktisi" style="background-color:DodgerBlue;">DodgerBlue</h4>
+          <h4 class="color_kod_ciktisi" style="background-color:MediumSeaGreen;">MediumSeaGreen</h4>
+          <h4 class="color_kod_ciktisi" style="background-color:Gray;">Gray</h4>
+          <h4 class="color_kod_ciktisi" style="background-color:SlateBlue;">SlateBlue</h4>
+          <h4 class="color_kod_ciktisi" style="background-color:Violet;">Violet</h4>
+          <h4 class="color_kod_ciktisi" style="background-color:LightGray;">LightGray</h4>
+        </div>
+        <h1 id="border"><b>Border</b></h1>
+        <p>Border a kabaca çerçeve diyebiliriz. İstediğimiz bir objeye belirlediğimiz özelliklerde çerçeveler eklememizi sağlar.</p>
+         <div id="border_kodlar_div">
+          <p class="border" style="border: dotted">A dotted border.</p>
+          <textarea disabled class="kodlar_border"><p class="border" style="border: dotted">A dotted border.</p></textarea>
+          <p class="border" style="border: dashed">A dashed border.</p>
+           <textarea disabled class="kodlar_border"><p class="border" style="border: dashed">A dashed border.</p></textarea>
+          <p class="border" style="border: solid">A solid border.</p>
+           <textarea disabled class="kodlar_border"><p class="border" style="border: solid">A solid border.</p></textarea>
+          <p class="border" style="border: double">A double border.</p>
+           <textarea disabled class="kodlar_border"><p class="border" style="border: double">A double border.</p></textarea>
+          <p class="border" style="border: groove">A groove border.</p>
+           <textarea disabled class="kodlar_border"><p class="border" style="border: groove">A groove border.</p></textarea>
+          <p class="border" style="border: ridge">A ridge border.</p>
+           <textarea disabled class="kodlar_border"><p class="border" style="border: ridge">A ridge border.</p></textarea>
+          <p class="border" style="border: inset">An inset border.</p>
+           <textarea disabled class="kodlar_border"><p class="border" style="border: inset">An inset border.</p></textarea>
+          <p class="border" style="border: outset">An outset border.</p>
+           <textarea disabled class="kodlar_border"><p class="border" style="border: outset">An outset border.</p></textarea>
+          </div>
+        <p>Border ı kendimiz de oluşturabiliriz.</p>
+        <textarea disabled class="kodlar_border" style="margin-bottom: 10px;"><span style="border: 3px solid red;">Ben sadece bir yazıyım.</span></textarea>
+        <span style="border: 3px solid red;">Ben sadece bir yazıyım.</span>
+        <textarea disabled class="kodlar_border" style="margin-bottom: 10px; margin-top: 10px;"><span style="border-width: 3px 5px 8px 10px;border-style: solid;">Ben sadece bir yazıyım.</span></textarea>
+        <span style="border-width: 5px 10px 15px 20px;border-style: solid;">Ben sadece bir yazıyım.</span>
+        <h1 id="listeler"><b>Listeler</b></h1>
+        <p>Aşağıdaki kodları boş bir html sayfasında deneyelim...</p>
+         <p>Html Kodları: </p>
+         <textarea class="kodlar" disabled style="height: 400px">
+        <p>Düzensiz Liste:</p>
+        <ul class="a">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Coca Cola</li>
+        </ul>
+
+        <ul class="b">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Coca Cola</li>
+        </ul>
+
+        <p>Düzenli Liste:</p>
+        <ol class="c">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Coca Cola</li>
+        </ol>
+
+        <ol class="d">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Coca Cola</li>
+        </ol></textarea>
+        <p>Css Kodlarımız:</p>
+        <textarea class="kodlar" disabled style="height: 250px">
+        ul.a {
+            list-style-type: circle;
+        }
+
+        ul.b {
+            list-style-type: square;
+        }
+
+        ol.c {
+            list-style-type: upper-roman;
+        }
+
+        ol.d {
+            list-style-type: lower-alpha;
+        }</textarea>
+        <h1 id="box"><b>Box</b></h1>
+        <p>Yazıları kutu içine alıp sitemizin istediğimiz bir yerine konumlandırabiliriz.</p>
+        <div id="box_div">
+        <span id="box_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto asperiores assumenda eius fuga illum laudantium minus natus provident repellendus sunt veniam, veritatis voluptatum? Adipisci atque fuga molestiae mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequuntur dignissimos ea, nisi quod sed velit voluptatem? Accusamus architecto blanditiis ducimus enim nihil officia qui quo, suscipit tenetur unde, veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum facere iure neque nostrum quibusdam! Atque dolor doloribus, impedit ipsam iusto maiores mollitia, nemo nisi, porro quasi quia quibusdam saepe. </span>
+        </div>
+        <h1 id="margin-padding"><b>Margin-Padding</b></h1>
+          <p>Margin kısaca iki element arası boşluktur. Padding ise element içi boşluktur</p>
+        <a href="src/ornekler.html">örnek için tıklayınız..</a>
+        <h1 id="table"><b>Table</b></h1>
+        <table id="ogrenciler">
+          <tr>
+            <th>İsim</th>
+            <th>Bölüm</th>
+            <th>Durumu</th>
+          </tr>
+          <tr>
+            <td>Furkan Özer</td>
+            <td>BTBS</td>
+            <td>Kaldı</td>
+          </tr>
+          <tr>
+            <td>Aykut Saki</td>
+            <td>Takı Teknolojisi</td>
+            <td>Geçti</td>
+          </tr>
+          <tr>
+            <td>Furkan Sayıner</td>
+            <td>Aşçılık</td>
+            <td>Kaldı</td>
+          </tr>
+          <tr>
+            <td>Yusuf Moğultay</td>
+            <td>Kimya</td>
+            <td>Geçti</td>
+          </tr>
+        </table>
+      </div>
+      <textarea style="margin-top: 10px" id="table_kod" class="kodlar" disabled>#ogrenciler {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#ogrenciler td, #ogrenciler th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#ogrenciler tr:nth-child(even){background-color: #f2f2f2;}
+
+#ogrenciler tr:hover {background-color: #ddd;}
+
+#ogrenciler th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}</textarea>
+      <h1 class="kodlar" id="display"><b>Display</b></h1>
+      <p>Display özelliği, bir elemanın nasıl görüntüleneceğini belirler.</p>
+      <p>Her HTML öğesi, ne tür bir öğe olduğuna bağlı olarak varsayılan bir görüntüleme değerine sahiptir. Çoğu öğenin varsayılan görüntüleme değeri blok veya satır içidir.</p>
+      <ul>
+        <li>deneme1</li>
+        <li>deneme2</li>
+        <li>deneme3</li>
+        <li>deneme4</li>
+      </ul>
+      <p>Standart bir ul -> li yapısı yukarıdadır.</p>
+      <ul id="deneme_ul">
+        <li>deneme1</li>
+        <li>deneme2</li>
+        <li>deneme3</li>
+        <li>deneme4</li>
+      </ul>
+      <p>li yapılarını yan yana yazdırmak için <textarea style="height: 15px"> display: inline;</textarea> komutu kullanılmıştır.</p>
+      <textarea class="kodlar" style="height: 75px"> display: block;
+        display: none;
+      </textarea>
+      <p><b>Block</b> Blok olarak nitelendirdiğimiz objeler alt alta biçimlenir. Blok objeler bütün satırı kaplar. Bu yüzden alt alta dururlar. CSS ile değiştirilebilir</p>
+      <p><b>İnline: </b>Bir satır içi öğe yeni bir satırda başlamaz ve yalnızca gerektiği kadar genişlik alır.</p>
+        <h1 id="inline-block"><b>Inline-Block</b></h1>
+        <p> Satır içi blok, eleman üzerinde genişlik ve yükseklik ayarlamaya izin verir.</p>
+        <p> Display: block ile karşılaştırıldığında, asıl fark şudur: inline-block elementten sonra bir satır sonu eklemez, böylece element> diğer elementlerin yanına oturabilir.</p>
+        <h1 id="overflow"><b>Overflow</b></h1>
+      <p>Taşma özelliği, bir içeriğin belirtilen alana sığmayacak kadar büyük olması durumunda içeriğin kırpılmasını veya kaydırma çubuğu eklenip eklenmeyeceğini belirler.</p>
+      <div id="overflowTest">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aspernatur assumenda, at atque debitis doloribus eius ex impedit magnam mollitia neque omnis perferendis perspiciatis placeat praesentium provident sapiente ut? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam asperiores deleniti deserunt exercitationem fuga impedit ipsa iure neque obcaecati odit omnis quae quas quia recusandae, sed similique temporibus ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eum natus neque recusandae. Asperiores deleniti iure necessitatibus veritatis? Accusantium commodi inventore mollitia necessitatibus quis recusandae rerum sequi velit veritatis voluptatibus.</div>
+      <textarea class="kodlar" style="height: 150px;" disabled>#overflowTest {
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  width: 50%;
+  height: 100px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+}</textarea>
+    <h1 id="align"><b>Align</b></h1>
+        <div style="margin: auto;width: 60%;border: 3px solid #73AD21; padding: 10px;"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet, assumenda, atque deserunt distinctio dolorem ducimus error esse exercitationem fugiat ipsum, laborum mollitia placeat quaerat quis quod repellendus suscipit? Vero.</p></div>
+        <p>Bulunduğu konumda ortalamaya yarar= margin: auto;</p>
+        <textarea class="kodlar" disabled style="margin-bottom: 15px"><div style="margin: auto;width: 60%;border: 3px solid #73AD21; padding: 10px;"></div></textarea>
+        <div style="border: 3px solid green; margin-bottom: 10px;"><p>Yazı Yazı Yazı deneme deneme menemen </p></div>
+        <div style="text-align: center;border: 3px solid green;"><p style="margin-top:15px">Yazı Yazı Yazı deneme deneme menemen </p></div>
+        <textarea class="kodlar" disabled style="margin-bottom: 15px;"><div style="border: 3px solid green; margin-bottom: 10px;"><p>Yazı Yazı Yazı deneme deneme menemen </p></div>
+        <div style="text-align: center;border: 3px solid green;"><p>Yazı Yazı Yazı deneme deneme menemen </p></div></textarea>
+        <p>Yukarıda gördüğümüz gibi; tek fark text-align: center; kodu, içinde bulunan yazıyı elemana göre ortalar. </p>
+        <img src="src/fotograf.jpg" style="width: 30%; display: block; margin-left: auto; margin-right: auto;">
+        <textarea class="kodlar" disabled><img src="src/fotograf.jpg" style="width: 30%; display: block; margin-left: auto; margin-right: auto;"></textarea>
+        <img src="src/fotograf.jpg" style="width: 25%; position: absolute; right: 0;margin-top: 10px">
+        <textarea class="kodlar" disabled style="margin-top: 230px"><img src="src/fotograf.jpg" style="width: 30%; position: absolute; right: 0;"></textarea>
+        <img src="src/fotograf.jpg" style="width: 30%; float: right;">
+        <textarea class="kodlar" disabled><img src="src/fotograf.jpg" style="width: 30%; float: right;"></textarea>
+        <div style="border: 3px solid tomato; margin-top: 15px; overflow: auto;">
+            <img src="src/fotograf.jpg" style="width: 20%; float: right; margin-top: 5px; margin-right: 5px">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, accusantium asperiores autem blanditiis cupiditate dolorem doloremque dolores enim est eveniet excepturi hic ipsam nam non officia, quasi tempora, voluptate! Magni. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium adipisci blanditiis consectetur dolorem enim est, expedita molestiae mollitia nam nesciunt nulla officia pariatur perferendis quae reiciendis temporibus vitae voluptas.</p>
+            <p><span style="font-size: 25px">L</span><span style="font-size: 20px">o</span><span style="font-size: 15px">r</span>em ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque autem consequatur dolorem doloremque dolores ducimus eligendi et facere fugit ipsam non, repellat sunt veniam, vitae! Dicta eius illum itaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil placeat repellendus voluptatibus! Laudantium, nihil quos. Aperiam consectetur doloribus, earum ipsum laborum laudantium maxime molestiae, nemo officia qui quisquam quod, velit.</p>
+        </div>
+        <textarea class="kodlar" disabled style="height: 80px"><div style="border: 3px solid maroon; margin-top: 15px; overflow: auto;">
+            <img src="src/fotograf.jpg" style="width: 20%; float: right; margin-top: 5px; margin-right: 5px">
+            <p>Paragraf 1</p>
+            <p>Paragraf 2</p>
+        </div></textarea>
+        <p>Başka bir örnek: </p>
+        <div style="border: 3px solid tomato; padding: 30px 0; text-align: center;">
+            Ben sadece basit bir yazıyım.
+        </div>
+        <textarea class="kodlar" disabled><div style="border: 3px solid tomato; padding: 30px 0; text-align: center;">
+            Ben sadece basit bir yazıyım.</div>
+        </textarea>
+        <h2>display: inline</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+        <h2>display: inline-block</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+        <h2>display: block</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+        <h1 id="pseduo"><b>Pseudo-element</b></h1>
+        <h1>::first-line</h1>
+        <p>:: first-line sözde elemanı, bir metnin ilk satırına özel bir stil eklemek için kullanılır.</p>
+        <p>Bir paragraf oluşturalım. Ancak bir satırdan fazla olmalı.</p>
+        <textarea disabled class="kodlar">p::first-line {color: red; font-variant: small-caps;}</textarea>
+        <h1>::first-letter</h1>
+        <p>:: first-letter bir metnin ilk harfine özel bir stil eklemek için kullanılır.</p>
+        <textarea disabled class="kodlar">p::first-letter {color: red; font-size: xx-large;}</textarea>
+        <h1>::before ve ::after</h1>
+        <p>::before ve ::after Bir öğenin içeriğinden önce veya sonra bir içerik eklemek için kullanılabilir.</p>
+        <textarea class="kodlar" disabled>h1::before // h1::after {content: url(src/fotograf.jpg);}</textarea>
+        <h1>Selection</h1>
+        <p>:: selection: color, background, imleç ve taslak: Aşağıdaki CSS özellikleri uygulanabilir. Aşağıdaki örnek, seçilen metni sarı bir arka plan üzerinde kırmızı yapar:</p>
+        <textarea disabled class="kodlar">::selection {color: red;  background: yellow;}</textarea>
+        <h1 id="position"><b>Position</b></h1>
+      <p><b>Static</b> Varsayılan olarak HTML elemanları statik olarak konumlandırılmıştır. Statik bir konumlandırılmış eleman her zaman sayfanın normal akışına göre konumlandırılır. Top, right, bottom, left ve z-index özellikleri bu öğe için geçerli değildir.</p>
+      <p><b>Relative</b> Göreceli olarak konumlandırılmış bir öğe normal konumuna göre konumlandırılmıştır. Göreceli olarak konumlandırılan elemanlar, diğer elementler taşınır ve katmanlar(gimp, photoshop gibi resim katmanları) halinde bulunabilir, ancak element için ayrılan alan normal akışta korunur.</p>
+      <img src="src/kutu.jpg">
+        <div class="relative">Bu element Relative ile konumlandırılmıştır;
+            <div class="absolute">Bu element ise Absolute ile Relative elemente göre konumlandırılmıştır: </div>
+        </div>
+        <img src="src/absolute.jpg">
+      <p><b>Absolute </b> Kendisini kapsayan bir üst öğeye relative konumlanmışsa öğeye göre konum almaktadır. Böyle bir eleman bulunmazsa, nesne web sayfasına göre konumlanacaktır.</p>
+        <p><b>Fixed</b> Sabitlenmiş bir eleman tarayıcı penceresine göre konumlandırılmıştır. Pencere kaydırılmış olsa bile hareket etmeyecektir.</p>
+      <p><b>Sticky</b> Yapışkan öğe göreceli ve sabit, kaydırma konumuna bağlı arasında geçiş yapar. Oluşturulan eleman kaydırma çubuğu gelene kadar position:relative gibi davranır, kaydırma çubuğu geldikten sonra position:fixed gibi davranır.<a href="src/sticky.html">Örnek için</a></p>
+
+      <h1 id="max-width"><b>Max-Width</b></h1>
+        <p>Bunun yerine maksimum genişliğin kullanılması, bu durumda, tarayıcının küçük pencereleri işlemesini iyileştirir. Bir siteyi küçük cihazlarda kullanılabilir duruma getirirken bu önemlidir<a href="src/max-width.html">Buradan gidin</a></p>
+        <h1 id="opacity"><b>Opacity / Transparency</b></h1>
+        <p>Opacity özelliği, bir öğenin opaklığını / saydamlığını belirtir.</p>
+        <h1>Transparent Image</h1>
+        <p>Opacity özelliği 0.0 ile 1.0 arasında bir değer alabilir. Düşük değer, daha şeffaf:</p>
+        <div>
+            <img class="opacity-foto" style="opacity: 0.2;" src="src/fotograf.jpg">
+            <img class="opacity-foto" style="opacity: 0.6;" src="src/fotograf.jpg">
+            <img class="opacity-foto" style="opacity: 1;" src="src/fotograf.jpg">
+            <span style="margin-left: 120px">0.2</span><span style="margin-left: 280px;">0.6</span><span style="margin-left: 280px">1</span>
+        </div>
+        <textarea disabled class="kodlar" style="margin-bottom: 10px">opacity: 0.5;</textarea>
+        <p>Hover kullanarak: </p>
+        <div style="height: 200px">
+            <img class="opacity-foto-hover"  src="src/fotograf.jpg">
+            <img class="opacity-foto-hover"  src="src/fotograf.jpg">
+            <img class="opacity-foto-hover"  src="src/fotograf.jpg">
+        </div>
+        <h1 id="hover"><b>Linkler</b></h1>
+        <p><b>:hover</b> komutu ile, üstüne gelindiğinde gözüken/işlem yapan bir özelliktir.</p>
+      <p>Örnek olarak: </p>
+      <span id="hover_span_ornek"><b>YAZI YAZI YAZI</b></span>
+        <p style="margin-top: 10px">Html Kodları:</p>
+      <textarea class="kodlar" disabled><span id="hover_span_ornekk"><b>YAZI YAZI YAZI</b></span></textarea>
+      <p>CSS Kodları:</p>
+      <textarea class="kodlar" id="hover_kodlar" disabled>#hover_span_ornek{
+          color: tomato;
+          background-color: lightgrey;
+          padding: 5px;
+        }
+        #hover_span_ornek:hover {
+          background-color: #009933;
+          color: black;
+        }
+      </textarea>
+        <p style="margin-top: 10px"><b>:visited</b> Kullanıcının ziyaret ettiği bir bağlantı</p>
+        <a href="https://www.google.com" id="visited-link">Bu bir link.........</a>
+        <textarea class="kodlar" disabled style="height: 50px; margin: 10px 0 10px 0;">#visited-link:visited {
+    color: #FF9900;
+}</textarea>
+        <p><b>:active</b> Tıklandığı anda oluşan fonsiyon.</p>
+        <div id="active-div"><span id="active-span">Active</span><br><span id="active-span-gizli">Buraya Tıklıyorsunuz</span></div>
+        <h1 id="dropdown"><b>Dropdown Menü</b></h1>
+        <p>Şimdi bir Dropdown Menü yapalım. Ve iç içe ul li yapısı oluşturalım.</p>
+        <textarea class="kodlar" id="dropdown_ul_li_kodlar" style="height: 380px;">
+          <ul>
+              <li><a href="#">İçecekler</a>
+                <ul>
+                    <li><a href="#">Siyah Kola</a></li>
+                    <li><a href="#">Beyaz Kola</a></li>
+                    <li><a href="#">Sarı Kola</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Yiyecekler</a>
+                <ul>
+                    <li><a href="#">Tantuni 1</a></li>
+                    <li><a href="#">Tantuni 2</a></li>
+                    <li><a href="#">Tantuni 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Giyecekler</a>
+                <ul>
+                    <li><a href="#">Ceket</a></li>
+                    <li><a href="#">Pantalon</a></li>
+                    <li><a href="#">Mont</a></li>
+                </ul>
+              </li>
+          </ul>
+        </textarea>
+        <p>CSS Kodlarımız ise </p>
+        <textarea class="kodlar" disabled style="height: 860px">
+.dropdown-menu-ul-li{
+    float: left;
+    margin-left: 10px;
+    list-style-type: none;
+}
+ #dropdown-dropdown-yiyecek{
+     display: inline-block;
+     background-color: #4CAF50;
+ }
+ #yiyecek-ic{
+     display: none;
+     position: absolute;
+     z-index: 1;
+     left: 200px;
+     margin-top: 0;
+ }
+ #dropdown-dropdown-yiyecek:hover #yiyecek-ic{
+     display: block;
+     background-color: #00CCFF;
+ }
+ #dropdown-dropdown-icecek{
+     display: inline-block;
+     background-color: #4CAF50;
+ }
+ #icecek-ic{
+     display: none;
+     position: absolute;
+     z-index: 1;
+     left: 120px;
+     margin-top: 0;
+ }
+ #dropdown-dropdown-icecek:hover #icecek-ic{
+     display: block;
+     background-color: #00CCFF;
+ }
+#dropdown-dropdown-giyecek{
+    display: inline-block;
+    background-color: #4CAF50;
+}
+ #giyecek-ic{
+     display: none;
+     position: absolute;
+     z-index: 1;
+     left: 270px;
+     margin-top: 0;
+ }
+.ic li{
+    list-style-type: none;
+}
+#dropdown-dropdown-giyecek:hover #giyecek-ic{
+    display: block;
+    background-color: #00CCFF;
+}</textarea>
+        <p>Çıktısı aşağıdadır:</p>
+        <ul id="dropdown-menu-ul">
+            <li class="dropdown-menu-ul-li" id="dropdown-dropdown-icecek"><a>içecekler
+                <ul class="ic" id="icecek-ic">
+                    <li><a>siyah kola</a></li>
+                    <li><a>sarı kola</a></li>
+                    <li><a>beyaz kola</a></li>
+                </ul>
+                </a></li>
+            <li class="dropdown-menu-ul-li" id="dropdown-dropdown-yiyecek"><a>yiyecekler
+                <ul class="ic" id="yiyecek-ic">
+                    <li><a>tantuni1</a></li>
+                    <li><a>tantuni2</a></li>
+                    <li><a>tantuni3</a></li>
+                </ul>
+                </a></li>
+            <li class="dropdown-menu-ul-li" id="dropdown-dropdown-giyecek"><a>giyecekler
+                <ul id="giyecek-ic" class="ic">
+                    <li><a>ceket</a></li>
+                    <li><a>mont</a></li>
+                    <li><a>ayakkbı</a></li>
+                    <li><a>tişört</a></li>
+                </ul>
+                </a></li>
+        </ul>
+        <p>Bu da yatay olanı:</p>
+        <div id="divdiv">asdfasdf
+            <div id="civciv">asdfasdf</div>
+        </div>
+        <h1 id="bootstrap" style="color: tomato"><b>Bootstrap</b></h1>
+        <a href="https://www.getbootstrap.com" target="_blank">Bootsrap indirme linki burda.</a>
+        <p></p>
+        <p>Açık kaynak kodlu, ücretsiz bir CSS frameworktür, tasarım aracıdır. Kolayca telefonlar, tabletler ve masaüstü bilgisayarlar için farklı ve cihaz büyüklüğüne uygun şekilde sitenizin gözükmesini sağlayan temalar/tasarımlar yapabilirsiniz. Bir site için gerekli olan tüm elemenleri (form ögeleri, etiketler, tablolar, uyarı ve bilgi metinleri, navigasyon bar, sayfalandırma modülü, açılan menüler, farklı özellikte butonlar vb bir çok tasarım ögesini) içinde barındıran Bootstrap tasarım yaparken bu hazır elementleri kullanarak bütün cihazlara uygun tasarımlar geliştirmenize yarar. Yani her şeyi hazır olan kodlarla yeni bir tasarım ortaya koymak çok basit ve pratiktir. Stiller, imajlar , js’ler daha önceden sistemin içine monte edilmiştir. Sizin yapacağınız tek şey bunları çağırmaktır.</p>
+        <a href="src/Theme/index.html">Bootstrap.index</a>
+    </div>
+    <div id="footer">
+      Bazı Hakları Saklıdır &copy; FUrQaN  | <a href="#">CSS</a>
+    </div>
+  </div>
+</body>
+</html>
